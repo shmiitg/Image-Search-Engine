@@ -1,0 +1,117 @@
+:root {
+  --clr-primary-1: #f2f2f2;
+  --clr-primary-2: #121212;
+  --clr-primary-3: #fff;
+  --clr-primary-4: #757575;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  background: var(--clr-primary-1);
+  line-height: 1.5;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: [gap-start] 1fr [content-start] max(65vw, 50rem) [content-end] 1fr [gap-end];
+  grid-template-rows: [top-gap] 6rem [start] auto [end];
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.2rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-2);
+  line-height: 1.25;
+}
+
+p {
+  color: var(--clr-primary-4);
+}
+
+@media screen and (min-width: 600px) {
+  h3 {
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+}
+
+.container {
+  grid-column: content-start/content-end;
+  grid-row: start/end;
+  padding: 0 1rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  color: var(--clr-primary-4);
+  flex-basis: 84%;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--light-shadow);
+  font: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  flex-basis: 12%;
+  background: var(--clr-primary-2);
+  color: var(--clr-primary-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.image-container {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 1.75rem;
+}
+
+.load-more .btn {
+  margin: auto;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.image-container .image {
+  flex-basis: 23%;
+  width: max(100%, 10rem);
+  height: 10rem;
+}
+
+img {
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
