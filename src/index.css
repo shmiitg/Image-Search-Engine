@@ -99,6 +99,7 @@ input:focus {
 
 .load-more .btn {
   margin: auto;
+  margin-bottom: 1.5rem;
   font-size: 0.85rem;
   font-weight: bold;
 }

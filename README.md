@@ -24,7 +24,6 @@
 ### Features
 
 - Single Page Application
-- Image rendering starts as soon as any letter is changed in Search Bar (No need to press Enter or Search Button)
 - Load More button will add more images when clicked
 
 ## Author
